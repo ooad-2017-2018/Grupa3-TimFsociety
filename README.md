@@ -33,31 +33,21 @@ Administrator prije naplate provjerava da li su časovi održani i na osnovu te 
 ### Funkcionalnosti
 **Studenti**
 - Registracija/prijava korisnika
-- Pregled i uređivanje korisničkog računa
-- Pretraga kurseva po oblasti
+- Pregled, uređivanje i brisanje korisničkog računa
 - Pretraga tutora
-- Odbir kursa i tutora
+- Odbir tutora i rezervacija termina
 - Praćenje napretka
 - Plaćanje tutora
-- Brisanje korisničkog računa
 
 **Tutori**
 - Registracija/prijava korisnika
-- Pregled i uređivanje korisnickog računa
+- Pregled, uređivanje i brisanje korisnickog računa
 - Kreiranje plana i rasporeda kursa
 - Procijena napretka studenta
 - Naplata 
-- Brisanje korisničkog računa
-
-**Administrator**
-- Dodavanje korisnika
-- Brisanje korisnika
-- Evidencija o plaćanju
 
 ### Akteri
 
 **Studenti**
 
 **Tutori**
-
-**Administrator**
