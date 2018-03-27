@@ -1,4 +1,4 @@
-# e-Tutor
+﻿# e-Tutor
 Grupa br. 3, Tim Fsociety
 
 Članovi:
@@ -14,8 +14,7 @@ Aplikacija nudi pregled dostupnih kurseva i tutora, sortiranih po potrebama stud
 ### Procesi
 **Registracija novih korisnika, održavanje i brisanje korisničkih računa**
 Korištenje aplikacije i za studente i za tutore počinje registracijom i popunjavanjem korisničkog profila. Tutor kreira plan i program,
-kao i raspored održavanja kursa. Administrator odobrava kreiranje novih korisničkih računa nakon verificiranja podataka, 
-te dodaje nove korisnike u sistem. Studenti i tutori imaju opciju uređivanja i ažuriranja svojih korisničkih računa.
+kao i raspored održavanja kursa. Studenti i tutori imaju opciju uređivanja i ažuriranja svojih korisničkih računa.
 
 **Prijava na kurs i odabir tutora**
 Student može da pretražuje aktuelne kurseve po oblastima, te ima uvid u plan, program, raspored i cijenu koji je tutor objavio. Na osnovu tih informacija
@@ -26,8 +25,8 @@ Nakon održanih časova, tutor ostavlja feedback za studenta u vidu procjene akt
 studenta. Tutor ima mogućnost unosa bodova ostvarenih na eventualnim zadaćama i testovima. 
 
 **Elektronsko plaćanje**
-Pri registraciji studenti i tutori ostavljaju informacije o načinu plaćanja. Ova aktivnost je regulisana od strane administratora.
-Administrator prije naplate provjerava da li su časovi održani i na osnovu te informacije odobrava plaćanje.
+Pri registraciji studenti i tutori ostavljaju informacije o načinu plaćanja. Ova aktivnost je regulisana od strane sistema.
+Sistem prije naplate provjerava da li su časovi održani i na osnovu te informacije odobrava plaćanje.
 
 
 ### Funkcionalnosti
