@@ -7,7 +7,50 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background = "{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <VisualStateManager.VisualStateGroups>
+
+            <VisualStateGroup>
+
+                <VisualState>
+
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth = "720" />
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target = "GreenRect.(RelativePanel.RightOf)"
+                     Value = "BlueRect" />
+                        <Setter Target = "GreenRect.(RelativePanel.AlignRightWithPanel)" 
+                     Value = "True" />
+                    </VisualState.Setters>
+
+                </VisualState>
+
+            </VisualStateGroup>
+
+        </VisualStateManager.VisualStateGroups>
+
+        <RelativePanel BorderBrush = "Gray" BorderThickness = "10">
+            <Rectangle x:Name = "RedRect" Fill = "Red" MinHeight = "100" 
+            MinWidth = "100"/>
+
+            <Rectangle x:Name = "BlueRect" Fill = "Blue" MinHeight = "100" 
+            MinWidth = "100" RelativePanel.RightOf = "RedRect" />
+
+            <!-- Width is not set on the green and yellow rectangles. 
+            It's determined by the RelativePanel properties. -->
+
+            <Rectangle x:Name = "GreenRect" Fill = "Green" MinHeight = "100" 
+            RelativePanel.Below = "BlueRect" RelativePanel.AlignLeftWith = "RedRect" 
+            RelativePanel.AlignRightWith = "BlueRect"/>
+
+            <Rectangle Fill = "Yellow" MinHeight = "100" RelativePanel.Below = "GreenRect" 
+            RelativePanel.AlignLeftWith = "BlueRect"
+            RelativePanel.AlignRightWithPanel = "True"/>
+
+        </RelativePanel>
 
     </Grid>
 </Page>
