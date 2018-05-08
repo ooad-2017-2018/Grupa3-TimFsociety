@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{30D38E62-FD76-4197-9074-DDEB3EBD86C3}</ProjectGuid>
+    <ProjectGuid>{11FC4779-7EAF-42D9-9087-BF3604626E68}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>eTutor</RootNamespace>
@@ -98,7 +98,38 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\DataModel.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Tutor.cs" />
+    <Compile Include="Models\TutoringSession.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AddCourseViewModel.cs" />
+    <Compile Include="ViewModels\AddSearchCoursesViewModel.cs" />
+    <Compile Include="ViewModels\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\EditAccountViewModel.cs" />
+    <Compile Include="ViewModels\NavPaneHomeViewModel.cs" />
+    <Compile Include="ViewModels\WelcomeViewModel.cs" />
+    <Compile Include="Views\AddCourseView.xaml.cs">
+      <DependentUpon>AddCourseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashboardView.xaml.cs">
+      <DependentUpon>DashboardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditAccountView.xaml.cs">
+      <DependentUpon>EditAccountView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NavPaneHomeView.xaml.cs">
+      <DependentUpon>NavPaneHomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchCoursesView.xaml.cs">
+      <DependentUpon>SearchCoursesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WelcomeView.xaml.cs">
+      <DependentUpon>WelcomeView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -107,10 +138,20 @@
     <None Include="eTutor_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\692.jpg" />
+    <Content Include="Assets\add.png" />
+    <Content Include="Assets\dashboard.png" />
+    <Content Include="Assets\feedback.png" />
+    <Content Include="Assets\delete.png" />
+    <Content Include="Assets\edit.png" />
+    <Content Include="Assets\community.png" />
+    <Content Include="Assets\transaction.png" />
+    <Content Include="Assets\user.png" />
+    <Content Include="Assets\search.png" />
+    <Content Include="Assets\splashScreen.scale-200.jpg" />
+    <Content Include="Assets\settings.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
-    <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
@@ -121,52 +162,41 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="AddCoursesView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="EditAccView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="LogInView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="RateStudentView.xaml">
+    <Page Include="Views\AddCourseView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SearchCoursesView.xaml">
+    <Page Include="Views\DashboardView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TrackProgressView.xaml">
+    <Page Include="Views\EditAccountView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ViewAccView.xaml">
+    <Page Include="Views\NavPaneHomeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SignUpView.xaml">
+    <Page Include="Views\SearchCoursesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="welcomeView.xaml">
+    <Page Include="Views\WelcomeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.0.1</Version>
+      <Version>6.0.8</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -1,0 +1,8 @@
+App.xbf
+MainPage.xbf
+Views\AddCourseView.xbf
+Views\DashboardView.xbf
+Views\EditAccountView.xbf
+Views\NavPaneHomeView.xbf
+Views\SearchCoursesView.xbf
+Views\WelcomeView.xbf

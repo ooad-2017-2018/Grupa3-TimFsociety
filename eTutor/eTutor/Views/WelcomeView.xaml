@@ -1,0 +1,93 @@
+﻿<Page
+    x:Class="eTutor.Views.WelcomeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:eTutor.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="wideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="register_panel_child.Orientation" Value="Horizontal" />
+                        <Setter Target="child1.Margin" Value="40" />
+                        <Setter Target="child2.Margin" Value="40" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="narrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="register_panel_child.Orientation" Value="Vertical" />
+                        <Setter Target="child1.Margin" Value="0" />
+                        <Setter Target="child2.Margin" Value="0" />
+                        <Setter Target="scroll.VerticalScrollBarVisibility" Value="Visible" />
+                        <Setter Target="scroll.Height" Value="300" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <Image x:Name="img" Visibility="Visible"  Source="ms-appx:///Assets/692.jpg" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="368" Width="478"/>
+        
+        <StackPanel x:Name="welcome_panel" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical" Visibility="Visible">
+            <TextBlock x:Name="wlc_msg" Text="Welcome to eTutor" FontSize="36" Margin="10" HorizontalAlignment="Center"/>
+            <Button x:Name="sign_in" Content="Sign in" Margin="10" Width="301" FontSize="22" Click="sign_in_Click">
+                <Button.Background>
+                    <SolidColorBrush Color="#663FAAD3"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="register" Content="Register" Margin="10" FontSize="22" Width="299" Click="register_Click">
+                <Button.Background>
+                    <SolidColorBrush Color="#663FAAD3"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel x:Name="sign_in_panel" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical" Visibility="Collapsed">
+            <TextBlock Text="Sign in to eTutor" FontSize="36" Margin="10" HorizontalAlignment="Center"/>
+            <TextBlock Text="Enter the following information:" FontSize="22" Margin="10" />
+            <TextBox x:Name="username" PlaceholderText="Username" FontSize="22" Margin="10"/>
+            <PasswordBox x:Name="password" PlaceholderText="Password" FontSize="22" Margin="10" />
+            <TextBlock x:Name="invalid_combo" Text="*Invalid username and password combination" FontSize="18" Margin="10" TextWrapping="Wrap" Foreground="DarkRed" FontWeight="Bold" Visibility="Collapsed"/>
+            <Button x:Name="sign_in_proceed" Content="Proceed" Margin="10" FontSize="22" Width="353" Click="sign_in_proceed_Click">
+                <Button.Background>
+                    <SolidColorBrush Color="#663FAAD3"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel x:Name="register_panel" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical" Visibility="Collapsed">
+            <TextBlock Text="Register to eTutor" HorizontalAlignment="Center" FontSize="36" Margin="10"/>
+            <ScrollViewer x:Name="scroll" VerticalScrollBarVisibility="Disabled" Margin="2">
+                <StackPanel  x:Name="register_panel_child" VerticalAlignment="Center" Margin="10"  HorizontalAlignment="Center" Orientation="Horizontal">
+                    <StackPanel x:Name="child1" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical" Margin="40">
+                        <TextBlock Text="Enter the following information" FontSize="22" Margin="10"/>
+                        <TextBox x:Name="new_username" PlaceholderText="Username" FontSize="22" Margin="10"/>
+                        <TextBox x:Name="new_e_mail" PlaceholderText="E-mail" FontSize="22" Margin="10"/>
+                        <PasswordBox x:Name="new_password" PlaceholderText="Password" FontSize="22" Margin="10"/>
+                        <PasswordBox x:Name="confirm_password" PlaceholderText="Confirm password" FontSize="22" Margin="10"/>
+                    </StackPanel>
+                    <StackPanel x:Name="child2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical" Margin="40" Width="321">
+                        <TextBlock Text="Type of user account:" FontSize="22" Margin="10" />
+                        <RadioButton x:Name="type_tutor" Content="Tutor"  Checked="HandleCheck" GroupName="type" FontSize="22" Margin="10"/>
+                        <RadioButton x:Name="type_student" Content="Student" Checked="HandleCheck" GroupName="type" FontSize="22" Margin="10"/>
+                        <TextBox x:Name="new_paypal_e_mail" PlaceholderText="PayPal account e-mail" FontSize="22" Margin="10" />
+                        <Button x:Name="register_proceed" Content="Proceed" Margin="10" FontSize="22" Width="305" Click="register_proceed_Click">
+                            <Button.Background>
+                                <SolidColorBrush Color="#663FAAD3"/>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+            <TextBlock x:Name="empty_field_alert" HorizontalAlignment="Center" Text="*Required field is empty" FontSize="18" Margin="10" TextWrapping="Wrap" Foreground="DarkRed" FontWeight="Bold" Visibility="Collapsed"/>
+            <TextBlock x:Name="username_alert" HorizontalAlignment="Center" Text="*Username is already taken" FontSize="18" Margin="10" TextWrapping="Wrap" Foreground="DarkRed" FontWeight="Bold" Visibility="Collapsed"/>
+        </StackPanel>
+    </Grid>
+</Page>

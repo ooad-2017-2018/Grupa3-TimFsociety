@@ -15,12 +15,6 @@ namespace eTutor
 
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
-        private global::Windows.UI.Xaml.Shapes.Rectangle RedRect; 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
-        private global::Windows.UI.Xaml.Shapes.Rectangle BlueRect; 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
-        private global::Windows.UI.Xaml.Shapes.Rectangle GreenRect; 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
         private bool _contentLoaded;
 
         /// <summary>

@@ -1,0 +1,85 @@
+﻿<Page
+    x:Class="eTutor.Views.NavPaneHomeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:eTutor.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <RelativePanel>
+            <Button Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="48" Click="HamburgerButton_Click" />
+            <Button Name="BackButton"
+                    RelativePanel.RightOf="HamburgerButton" 
+                    FontFamily="Segoe MDl2 Assets" 
+                    FontSize="36"
+                    Content="&#xE0C4;" 
+                    Click="BackButton_Click" Height="61" Margin="0.2,0,-0.4,-12.2"
+                     />
+
+            <TextBlock Name="TitleTextBlock"
+                       RelativePanel.RightOf="BackButton"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Margin="20,5,0,0"/>
+        </RelativePanel>
+        <SplitView x:Name="nav_pane_split_view" 
+                   Grid.Row="1" 
+                   DisplayMode="CompactOverlay" 
+                   OpenPaneLength="250" 
+                   CompactPaneLength="70" 
+                   HorizontalAlignment="Left">
+            <SplitView.Pane>
+                <ListBox SelectionMode="Single"
+                         Margin="0"
+                         Name="IconsListBox" 
+                         SelectionChanged="IconsListBox_SelectionChanged">
+                    <ListBoxItem Name="Dashboard">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="dash_icon" Visibility="Visible"  Source="ms-appx:///Assets/dashboard.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="41" Width="42" Margin="0"/>
+                            <TextBlock Text="Dashboard" FontSize="24" Margin="20,0,0,0" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem Name="EditAccountInfo">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="edit_acc_icon" Visibility="Visible"  Source="ms-appx:///Assets/user.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="41" Width="42" Margin="0"/>
+                            <TextBlock Text="Edit Account" FontSize="24" Margin="20,0,0,0" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem Name="SearchCourse">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="search_courses_icon" Visibility="Visible"  Source="ms-appx:///Assets/search.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="41" Width="42" Margin="0"/>
+                            <TextBlock Text="Search Courses" FontSize="24" Margin="20,0,0,0" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem Name="AddCourse">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="add_course_icon" Visibility="Visible"  Source="ms-appx:///Assets/add.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="41" Width="42" Margin="0"/>
+                            <TextBlock Text="Add Course" FontSize="24" Margin="20,0,0,0" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem Name="Feedback">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="feedback_icon" Visibility="Visible"  Source="ms-appx:///Assets/feedback.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="41" Width="42" Margin="0"/>
+                            <TextBlock Text="Feedback" FontSize="24" Margin="20,0,0,0" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                </ListBox>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Frame Name="content_frame"></Frame>
+            </SplitView.Content>
+        </SplitView>
+
+    </Grid>
+</Page>
