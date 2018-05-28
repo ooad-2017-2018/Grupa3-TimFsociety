@@ -1,1 +1,1 @@
-C:\Users\Azra\source\repos\eTutor\eTutor\eTutor.csproj;x86
+C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\eTutor.csproj;x86

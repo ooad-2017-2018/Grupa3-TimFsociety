@@ -25575,11 +25575,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Azra\\source\\repos\\eTutor\\eTutor\\eTutor.csproj",
+      "projectUniqueName": "C:\\Users\\Azra\\Grupa3-TimFsociety\\eTutor\\eTutor\\eTutor.csproj",
       "projectName": "eTutor",
-      "projectPath": "C:\\Users\\Azra\\source\\repos\\eTutor\\eTutor\\eTutor.csproj",
+      "projectPath": "C:\\Users\\Azra\\Grupa3-TimFsociety\\eTutor\\eTutor\\eTutor.csproj",
       "packagesPath": "C:\\Users\\Azra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Azra\\source\\repos\\eTutor\\eTutor\\obj\\",
+      "outputPath": "C:\\Users\\Azra\\Grupa3-TimFsociety\\eTutor\\eTutor\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

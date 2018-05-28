@@ -1,0 +1,26 @@
+Design patterni
+
+Objasni kada i kako se koriste inaèe i da li se i gdje su iskorišteni u vašem projektu 
+(ili ako nisu gdje bi bilo dobro mjesto za njihovu upotrebu i zašto)!
+
+
+Builder pattern
+Creational Design Pattern
+
+Koristan kada imamo situaciju u kojoj necemo/ne mozemo da koristimo konstruktor klase pri inicijalizaciji objekta. 
+Recimo da ne zelimo da inicijaliziramo sve atribute klase jer ne znamo njihove vrijednosti. Builder pattern nam dopusta da dodjeljujemo
+vrijednosti atributima povremeno ili u koracima. U nasem slucaju bi se koristio za inicijalizaciju klasa korisnika (Student i Tutor) 
+jer pri registraciji se ne traze sve informacije o istim. 
+
+Facade pattern 
+Structural Design Patterns
+
+Facade patern, u sustini, koristimo kada zelimo da pojednostavimo kompleksniji sistem. Primjer toga bi bio jednostavni interfejs koji poziva skup 
+kompleksniji metoda/funkcija ili drugih interfejsa nad nekim objektom. Tipicna upotreba ovog paterna je usko vezana sa situacijama kada je sistem
+ko je se poziva tezak za razumijeti ili kada nam je potrebna ulazna tacka na pocetni nivo nekog slojevitog koda. Za nasu aplikaciju, facade pattern 
+bi bio koristen pri pozivanju interfejsa za transakcije izmedju Studenata i Tutora, gdje bi "sakrili" kompleksnost transakcije (validacija podataka,
+provjera da li je odrzan kurs, ...) unutar jednog interfejsa.
+
+Observer
+Behavioral Design Patterns
+

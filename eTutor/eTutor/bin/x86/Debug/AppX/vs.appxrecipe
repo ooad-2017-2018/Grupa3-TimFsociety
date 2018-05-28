@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>1c6eeb0d-c132-4515-a2c0-1565fce98df8</PackageIdentityName>
     <PackageIdentityPublisher>CN=Azra</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Azra\source\repos\eTutor\eTutor\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Azra\source\repos\eTutor\eTutor\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>E743BB250E1ABB8459CA74374DDB43895B0D7BF9E7C5478175EB84922DFAA403</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>1c6eeb0d-c132-4515-a2c0-1565fce98df8_1.0.0.0_x86__m22jvvt64c5t4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>1c6eeb0d-c132-4515-a2c0-1565fce98df8_m22jvvt64c5t4!App</RegisteredUserModeAppID>
@@ -28,16 +28,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Azra\source\repos\eTutor\eTutor\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-08T11:39:14.712</Modified>
+      <Modified>2018-05-24T00:08:41.928</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\bin\x86\Debug\eTutor.exe">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\bin\x86\Debug\eTutor.exe">
       <PackagePath>entrypoint\eTutor.exe</PackagePath>
-      <Modified>2018-05-08T11:39:10.178</Modified>
+      <Modified>2018-05-24T00:08:24.831</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azra\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -495,84 +495,84 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T21:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\692.jpg">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\692.jpg">
       <PackagePath>Assets\692.jpg</PackagePath>
       <Modified>2018-05-07T16:57:21.960</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\splashScreen.scale-200.jpg">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\splashScreen.scale-200.jpg">
       <PackagePath>Assets\splashScreen.scale-200.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-05-07T17:35:13.943</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\add.png">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\add.png">
       <PackagePath>Assets\add.png</PackagePath>
       <Modified>2018-05-07T18:18:46.727</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\dashboard.png">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\dashboard.png">
       <PackagePath>Assets\dashboard.png</PackagePath>
       <Modified>2018-05-07T17:56:16.358</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\feedback.png">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\feedback.png">
       <PackagePath>Assets\feedback.png</PackagePath>
       <Modified>2018-05-07T17:57:59.508</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\delete.png">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\delete.png">
       <PackagePath>Assets\delete.png</PackagePath>
       <Modified>2018-05-07T18:00:10.014</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\edit.png">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\edit.png">
       <PackagePath>Assets\edit.png</PackagePath>
       <Modified>2018-05-07T18:00:55.853</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\community.png">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\community.png">
       <PackagePath>Assets\community.png</PackagePath>
       <Modified>2018-05-07T18:01:41.004</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\transaction.png">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\transaction.png">
       <PackagePath>Assets\transaction.png</PackagePath>
       <Modified>2018-05-07T18:02:52.452</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\user.png">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\user.png">
       <PackagePath>Assets\user.png</PackagePath>
       <Modified>2018-05-07T17:56:32.568</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\search.png">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\search.png">
       <PackagePath>Assets\search.png</PackagePath>
       <Modified>2018-05-07T17:57:38.061</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\settings.png">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\settings.png">
       <PackagePath>Assets\settings.png</PackagePath>
       <Modified>2018-05-07T17:58:45.737</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2018-04-02T14:35:43.183</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-04-02T14:35:43.183</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-04-02T14:35:43.183</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-04-02T14:35:43.183</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-04-02T14:35:43.183</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2018-05-06T14:46:27.641</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\bin\x86\Debug\eTutor.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\bin\x86\Debug\eTutor.xr.xml">
       <PackagePath>eTutor.xr.xml</PackagePath>
       <Modified>2018-05-08T11:35:28.515</Modified>
     </AppxPackagedFile>
@@ -580,14 +580,14 @@
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2018-04-02T16:45:13.734</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-08T11:39:13.265</Modified>
+      <Modified>2018-05-24T00:08:35.954</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Azra\source\repos\eTutor\eTutor\bin\x86\Debug\Core\eTutor.exe">
+    <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\bin\x86\Debug\Core\eTutor.exe">
       <PackagePath>eTutor.exe</PackagePath>
-      <Modified>2018-05-08T11:39:14.690</Modified>
+      <Modified>2018-05-24T00:08:41.881</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
