@@ -21,6 +21,11 @@ ko je se poziva tezak za razumijeti ili kada nam je potrebna ulazna tacka na poc
 bi bio koristen pri pozivanju interfejsa za transakcije izmedju Studenata i Tutora, gdje bi "sakrili" kompleksnost transakcije (validacija podataka,
 provjera da li je odrzan kurs, ...) unutar jednog interfejsa.
 
-Observer
+Strategy pattern 
 Behavioral Design Patterns
 
+Strategy patern omoguæava izbor algoritma u toku rada programa. Umjesto implementiranja jedinstvenog algoritma direktno, kod primi instrukcije za
+vrijeme rada programa koje se ticu odluke koji od ponudjenih alogritama iz vec definisane porodice algoritama da koristi. Strategy patern cini nas
+kod fleksibilnijim i omogucava visekratnu upotrebu. Za nasu aplikaciju, primjena ovog paterna bi bila u scenariju poput sljedeceg: recimo da u klasi
+koja vrsi validaciju nad nekim podacima i zelimo implementirati nacin da algoritam te validacije zavisi od tipa podatak, izvora podataka, izbora korisnika, 
+itd. Ovi faktori nam nece biti poznati sve do pokretanja programa.
