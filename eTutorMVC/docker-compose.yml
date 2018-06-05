@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  etutormvc:
+    image: etutormvc
+    build:
+      context: .\eTutorMVC
+      dockerfile: Dockerfile

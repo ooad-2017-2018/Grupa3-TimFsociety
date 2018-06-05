@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="eTutorModelStoreContainer" CdmEntityContainer="eTutorEntities1">
+    <EntitySetMapping Name="courses">
+      <EntityTypeMapping TypeName="eTutorModel.cours">
+        <MappingFragment StoreEntitySet="courses">
+          <ScalarProperty Name="course_id" ColumnName="course_id" />
+          <ScalarProperty Name="tutor_id" ColumnName="tutor_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="price_e_coin" ColumnName="price_e_coin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="etutor_organization">
+      <EntityTypeMapping TypeName="eTutorModel.etutor_organization">
+        <MappingFragment StoreEntitySet="etutor_organization">
+          <ScalarProperty Name="e_tutor_daily_id" ColumnName="e_tutor_daily_id" />
+          <ScalarProperty Name="date_time" ColumnName="date_time" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="messages">
+      <EntityTypeMapping TypeName="eTutorModel.message">
+        <MappingFragment StoreEntitySet="messages">
+          <ScalarProperty Name="message_id" ColumnName="message_id" />
+          <ScalarProperty Name="sender_id" ColumnName="sender_id" />
+          <ScalarProperty Name="reciever_id" ColumnName="reciever_id" />
+          <ScalarProperty Name="message_content" ColumnName="message_content" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="seen" ColumnName="seen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="notifications">
+      <EntityTypeMapping TypeName="eTutorModel.notification">
+        <MappingFragment StoreEntitySet="notifications">
+          <ScalarProperty Name="notification_id" ColumnName="notification_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="date_time" ColumnName="date_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="passwords">
+      <EntityTypeMapping TypeName="eTutorModel.password">
+        <MappingFragment StoreEntitySet="passwords">
+          <ScalarProperty Name="password_id" ColumnName="password_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="password1" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="students">
+      <EntityTypeMapping TypeName="eTutorModel.student">
+        <MappingFragment StoreEntitySet="students">
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="assessment_grade" ColumnName="assessment_grade" />
+          <ScalarProperty Name="student_level" ColumnName="student_level" />
+          <ScalarProperty Name="subscription_id" ColumnName="subscription_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subscriptions">
+      <EntityTypeMapping TypeName="eTutorModel.subscription">
+        <MappingFragment StoreEntitySet="subscription">
+          <ScalarProperty Name="subscription_id" ColumnName="subscription_id" />
+          <ScalarProperty Name="subscription_type" ColumnName="subscription_type" />
+          <ScalarProperty Name="subscription_price" ColumnName="subscription_price" />
+          <ScalarProperty Name="e_coin_amount" ColumnName="e_coin_amount" />
+          <ScalarProperty Name="date_time_next_payment" ColumnName="date_time_next_payment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transactions">
+      <EntityTypeMapping TypeName="eTutorModel.transaction">
+        <MappingFragment StoreEntitySet="transactions">
+          <ScalarProperty Name="transactions_id" ColumnName="transactions_id" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="tutor_id" ColumnName="tutor_id" />
+          <ScalarProperty Name="course_id" ColumnName="course_id" />
+          <ScalarProperty Name="tutoring_session_id" ColumnName="tutoring_session_id" />
+          <ScalarProperty Name="transaction_amount" ColumnName="transaction_amount" />
+          <ScalarProperty Name="e_tutor_provision_percent" ColumnName="e_tutor_provision_percent" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tutoring_sessions">
+      <EntityTypeMapping TypeName="eTutorModel.tutoring_sessions">
+        <MappingFragment StoreEntitySet="tutoring_sessions">
+          <ScalarProperty Name="tutoring_session_id" ColumnName="tutoring_session_id" />
+          <ScalarProperty Name="date_time" ColumnName="date_time" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="confirmed_status" ColumnName="confirmed_status" />
+          <ScalarProperty Name="course_id" ColumnName="course_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tutors">
+      <EntityTypeMapping TypeName="eTutorModel.tutor">
+        <MappingFragment StoreEntitySet="tutors">
+          <ScalarProperty Name="tutor_id" ColumnName="tutor_id" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="qualifications" ColumnName="qualifications" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="eTutorModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="e_mail" ColumnName="e_mail" />
+          <ScalarProperty Name="pay_pal_mail" ColumnName="pay_pal_mail" />
+          <ScalarProperty Name="e_coin_total" ColumnName="e_coin_total" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="eTutorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="courses">
+          <Key>
+            <PropertyRef Name="course_id" />
+          </Key>
+          <Property Name="course_id" Type="int" Nullable="false" />
+          <Property Name="tutor_id" Type="int" Nullable="false" />
+          <Property Name="name" Type="text" Nullable="false" />
+          <Property Name="description" Type="text" Nullable="false" />
+          <Property Name="category" Type="text" Nullable="false" />
+          <Property Name="price_e_coin" Type="real" Nullable="false" />
+        </EntityType>
+        <EntityType Name="etutor_organization">
+          <Key>
+            <PropertyRef Name="e_tutor_daily_id" />
+          </Key>
+          <Property Name="e_tutor_daily_id" Type="int" Nullable="false" />
+          <Property Name="date_time" Type="text" Nullable="false" />
+          <Property Name="total" Type="real" Nullable="false" />
+        </EntityType>
+        <EntityType Name="messages">
+          <Key>
+            <PropertyRef Name="message_id" />
+          </Key>
+          <Property Name="message_id" Type="int" Nullable="false" />
+          <Property Name="sender_id" Type="int" Nullable="false" />
+          <Property Name="reciever_id" Type="int" Nullable="false" />
+          <Property Name="message_content" Type="text" />
+          <Property Name="subject" Type="text" />
+          <Property Name="seen" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="notifications">
+          <Key>
+            <PropertyRef Name="notification_id" />
+          </Key>
+          <Property Name="notification_id" Type="int" Nullable="false" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="content" Type="text" Nullable="false" />
+          <Property Name="priority" Type="text" Nullable="false" />
+          <Property Name="date_time" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="passwords">
+          <Key>
+            <PropertyRef Name="password_id" />
+          </Key>
+          <Property Name="password_id" Type="int" Nullable="false" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="password" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="students">
+          <Key>
+            <PropertyRef Name="student_id" />
+          </Key>
+          <Property Name="student_id" Type="int" Nullable="false" />
+          <Property Name="assessment_grade" Type="real" />
+          <Property Name="student_level" Type="text" Nullable="false" />
+          <Property Name="subscription_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="subscription">
+          <Key>
+            <PropertyRef Name="subscription_id" />
+          </Key>
+          <Property Name="subscription_id" Type="int" Nullable="false" />
+          <Property Name="subscription_type" Type="text" Nullable="false" />
+          <Property Name="subscription_price" Type="real" Nullable="false" />
+          <Property Name="e_coin_amount" Type="real" Nullable="false" />
+          <Property Name="date_time_next_payment" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="transactions">
+          <Key>
+            <PropertyRef Name="transactions_id" />
+          </Key>
+          <Property Name="transactions_id" Type="int" Nullable="false" />
+          <Property Name="date" Type="text" Nullable="false" />
+          <Property Name="student_id" Type="int" Nullable="false" />
+          <Property Name="tutor_id" Type="int" Nullable="false" />
+          <Property Name="course_id" Type="int" Nullable="false" />
+          <Property Name="tutoring_session_id" Type="int" Nullable="false" />
+          <Property Name="transaction_amount" Type="real" Nullable="false" />
+          <Property Name="e_tutor_provision_percent" Type="real" />
+          <Property Name="status" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tutoring_sessions">
+          <Key>
+            <PropertyRef Name="tutoring_session_id" />
+          </Key>
+          <Property Name="tutoring_session_id" Type="int" Nullable="false" />
+          <Property Name="date_time" Type="text" Nullable="false" />
+          <Property Name="status" Type="text" Nullable="false" />
+          <Property Name="confirmed_status" Type="bit" Nullable="false" />
+          <Property Name="course_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tutors">
+          <Key>
+            <PropertyRef Name="tutor_id" />
+          </Key>
+          <Property Name="tutor_id" Type="int" Nullable="false" />
+          <Property Name="rating" Type="real" />
+          <Property Name="qualifications" Type="text" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="first_name" Type="text" Nullable="false" />
+          <Property Name="last_name" Type="text" Nullable="false" />
+          <Property Name="e_mail" Type="text" Nullable="false" />
+          <Property Name="pay_pal_mail" Type="text" Nullable="false" />
+          <Property Name="e_coin_total" Type="real" />
+          <Property Name="type" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="eTutorModelStoreContainer">
+          <EntitySet Name="courses" EntityType="Self.courses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="etutor_organization" EntityType="Self.etutor_organization" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="messages" EntityType="Self.messages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="notifications" EntityType="Self.notifications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="passwords" EntityType="Self.passwords" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="students" EntityType="Self.students" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="subscription" EntityType="Self.subscription" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="transactions" EntityType="Self.transactions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tutoring_sessions" EntityType="Self.tutoring_sessions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tutors" EntityType="Self.tutors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="eTutorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="cours">
+          <Key>
+            <PropertyRef Name="course_id" />
+          </Key>
+          <Property Name="course_id" Type="Int32" Nullable="false" />
+          <Property Name="tutor_id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="category" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="price_e_coin" Type="Single" Nullable="false" />
+        </EntityType>
+        <EntityType Name="etutor_organization">
+          <Key>
+            <PropertyRef Name="e_tutor_daily_id" />
+          </Key>
+          <Property Name="e_tutor_daily_id" Type="Int32" Nullable="false" />
+          <Property Name="date_time" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="total" Type="Single" Nullable="false" />
+        </EntityType>
+        <EntityType Name="message">
+          <Key>
+            <PropertyRef Name="message_id" />
+          </Key>
+          <Property Name="message_id" Type="Int32" Nullable="false" />
+          <Property Name="sender_id" Type="Int32" Nullable="false" />
+          <Property Name="reciever_id" Type="Int32" Nullable="false" />
+          <Property Name="message_content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="subject" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="seen" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="notification">
+          <Key>
+            <PropertyRef Name="notification_id" />
+          </Key>
+          <Property Name="notification_id" Type="Int32" Nullable="false" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="priority" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="date_time" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="password">
+          <Key>
+            <PropertyRef Name="password_id" />
+          </Key>
+          <Property Name="password_id" Type="Int32" Nullable="false" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="password1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="student_id" />
+          </Key>
+          <Property Name="student_id" Type="Int32" Nullable="false" />
+          <Property Name="assessment_grade" Type="Single" />
+          <Property Name="student_level" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="subscription_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="subscription">
+          <Key>
+            <PropertyRef Name="subscription_id" />
+          </Key>
+          <Property Name="subscription_id" Type="Int32" Nullable="false" />
+          <Property Name="subscription_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="subscription_price" Type="Single" Nullable="false" />
+          <Property Name="e_coin_amount" Type="Single" Nullable="false" />
+          <Property Name="date_time_next_payment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="transaction">
+          <Key>
+            <PropertyRef Name="transactions_id" />
+          </Key>
+          <Property Name="transactions_id" Type="Int32" Nullable="false" />
+          <Property Name="date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="student_id" Type="Int32" Nullable="false" />
+          <Property Name="tutor_id" Type="Int32" Nullable="false" />
+          <Property Name="course_id" Type="Int32" Nullable="false" />
+          <Property Name="tutoring_session_id" Type="Int32" Nullable="false" />
+          <Property Name="transaction_amount" Type="Single" Nullable="false" />
+          <Property Name="e_tutor_provision_percent" Type="Single" />
+          <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tutoring_sessions">
+          <Key>
+            <PropertyRef Name="tutoring_session_id" />
+          </Key>
+          <Property Name="tutoring_session_id" Type="Int32" Nullable="false" />
+          <Property Name="date_time" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="confirmed_status" Type="Boolean" Nullable="false" />
+          <Property Name="course_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tutor">
+          <Key>
+            <PropertyRef Name="tutor_id" />
+          </Key>
+          <Property Name="tutor_id" Type="Int32" Nullable="false" />
+          <Property Name="rating" Type="Single" />
+          <Property Name="qualifications" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="first_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="last_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="e_mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pay_pal_mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="e_coin_total" Type="Single" />
+          <Property Name="type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="eTutorEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="courses" EntityType="Self.cours" />
+          <EntitySet Name="etutor_organization" EntityType="Self.etutor_organization" />
+          <EntitySet Name="messages" EntityType="Self.message" />
+          <EntitySet Name="notifications" EntityType="Self.notification" />
+          <EntitySet Name="passwords" EntityType="Self.password" />
+          <EntitySet Name="students" EntityType="Self.student" />
+          <EntitySet Name="subscriptions" EntityType="Self.subscription" />
+          <EntitySet Name="transactions" EntityType="Self.transaction" />
+          <EntitySet Name="tutoring_sessions" EntityType="Self.tutoring_sessions" />
+          <EntitySet Name="tutors" EntityType="Self.tutor" />
+          <EntitySet Name="users" EntityType="Self.user" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="eTutorModelStoreContainer" CdmEntityContainer="eTutorEntities1">
+          <EntitySetMapping Name="courses">
+            <EntityTypeMapping TypeName="eTutorModel.cours">
+              <MappingFragment StoreEntitySet="courses">
+                <ScalarProperty Name="course_id" ColumnName="course_id" />
+                <ScalarProperty Name="tutor_id" ColumnName="tutor_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="category" ColumnName="category" />
+                <ScalarProperty Name="price_e_coin" ColumnName="price_e_coin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="etutor_organization">
+            <EntityTypeMapping TypeName="eTutorModel.etutor_organization">
+              <MappingFragment StoreEntitySet="etutor_organization">
+                <ScalarProperty Name="e_tutor_daily_id" ColumnName="e_tutor_daily_id" />
+                <ScalarProperty Name="date_time" ColumnName="date_time" />
+                <ScalarProperty Name="total" ColumnName="total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="messages">
+            <EntityTypeMapping TypeName="eTutorModel.message">
+              <MappingFragment StoreEntitySet="messages">
+                <ScalarProperty Name="message_id" ColumnName="message_id" />
+                <ScalarProperty Name="sender_id" ColumnName="sender_id" />
+                <ScalarProperty Name="reciever_id" ColumnName="reciever_id" />
+                <ScalarProperty Name="message_content" ColumnName="message_content" />
+                <ScalarProperty Name="subject" ColumnName="subject" />
+                <ScalarProperty Name="seen" ColumnName="seen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="notifications">
+            <EntityTypeMapping TypeName="eTutorModel.notification">
+              <MappingFragment StoreEntitySet="notifications">
+                <ScalarProperty Name="notification_id" ColumnName="notification_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="priority" ColumnName="priority" />
+                <ScalarProperty Name="date_time" ColumnName="date_time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="passwords">
+            <EntityTypeMapping TypeName="eTutorModel.password">
+              <MappingFragment StoreEntitySet="passwords">
+                <ScalarProperty Name="password_id" ColumnName="password_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="password1" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="students">
+            <EntityTypeMapping TypeName="eTutorModel.student">
+              <MappingFragment StoreEntitySet="students">
+                <ScalarProperty Name="student_id" ColumnName="student_id" />
+                <ScalarProperty Name="assessment_grade" ColumnName="assessment_grade" />
+                <ScalarProperty Name="student_level" ColumnName="student_level" />
+                <ScalarProperty Name="subscription_id" ColumnName="subscription_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="subscriptions">
+            <EntityTypeMapping TypeName="eTutorModel.subscription">
+              <MappingFragment StoreEntitySet="subscription">
+                <ScalarProperty Name="subscription_id" ColumnName="subscription_id" />
+                <ScalarProperty Name="subscription_type" ColumnName="subscription_type" />
+                <ScalarProperty Name="subscription_price" ColumnName="subscription_price" />
+                <ScalarProperty Name="e_coin_amount" ColumnName="e_coin_amount" />
+                <ScalarProperty Name="date_time_next_payment" ColumnName="date_time_next_payment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="transactions">
+            <EntityTypeMapping TypeName="eTutorModel.transaction">
+              <MappingFragment StoreEntitySet="transactions">
+                <ScalarProperty Name="transactions_id" ColumnName="transactions_id" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="student_id" ColumnName="student_id" />
+                <ScalarProperty Name="tutor_id" ColumnName="tutor_id" />
+                <ScalarProperty Name="course_id" ColumnName="course_id" />
+                <ScalarProperty Name="tutoring_session_id" ColumnName="tutoring_session_id" />
+                <ScalarProperty Name="transaction_amount" ColumnName="transaction_amount" />
+                <ScalarProperty Name="e_tutor_provision_percent" ColumnName="e_tutor_provision_percent" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tutoring_sessions">
+            <EntityTypeMapping TypeName="eTutorModel.tutoring_sessions">
+              <MappingFragment StoreEntitySet="tutoring_sessions">
+                <ScalarProperty Name="tutoring_session_id" ColumnName="tutoring_session_id" />
+                <ScalarProperty Name="date_time" ColumnName="date_time" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="confirmed_status" ColumnName="confirmed_status" />
+                <ScalarProperty Name="course_id" ColumnName="course_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tutors">
+            <EntityTypeMapping TypeName="eTutorModel.tutor">
+              <MappingFragment StoreEntitySet="tutors">
+                <ScalarProperty Name="tutor_id" ColumnName="tutor_id" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+                <ScalarProperty Name="qualifications" ColumnName="qualifications" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="eTutorModel.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="first_name" ColumnName="first_name" />
+                <ScalarProperty Name="last_name" ColumnName="last_name" />
+                <ScalarProperty Name="e_mail" ColumnName="e_mail" />
+                <ScalarProperty Name="pay_pal_mail" ColumnName="pay_pal_mail" />
+                <ScalarProperty Name="e_coin_total" ColumnName="e_coin_total" />
+                <ScalarProperty Name="type" ColumnName="type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

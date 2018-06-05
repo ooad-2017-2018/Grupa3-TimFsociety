@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-24T00:08:41.928</Modified>
+      <Modified>2018-06-05T14:00:00.114</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\bin\x86\Debug\eTutor.exe">
       <PackagePath>entrypoint\eTutor.exe</PackagePath>
-      <Modified>2018-05-24T00:08:24.831</Modified>
+      <Modified>2018-06-05T13:59:54.643</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azra\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -587,7 +587,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azra\Grupa3-TimFsociety\eTutor\eTutor\bin\x86\Debug\Core\eTutor.exe">
       <PackagePath>eTutor.exe</PackagePath>
-      <Modified>2018-05-24T00:08:41.881</Modified>
+      <Modified>2018-06-05T14:00:00.068</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

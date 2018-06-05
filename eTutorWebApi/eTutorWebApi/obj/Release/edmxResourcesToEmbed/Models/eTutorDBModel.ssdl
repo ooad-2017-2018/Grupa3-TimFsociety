@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eTutorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="courses">
+    <Key>
+      <PropertyRef Name="course_id" />
+    </Key>
+    <Property Name="course_id" Type="int" Nullable="false" />
+    <Property Name="tutor_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="text" Nullable="false" />
+    <Property Name="description" Type="text" Nullable="false" />
+    <Property Name="category" Type="text" Nullable="false" />
+    <Property Name="price_e_coin" Type="real" Nullable="false" />
+  </EntityType>
+  <EntityType Name="etutor_organization">
+    <Key>
+      <PropertyRef Name="e_tutor_daily_id" />
+    </Key>
+    <Property Name="e_tutor_daily_id" Type="int" Nullable="false" />
+    <Property Name="date_time" Type="text" Nullable="false" />
+    <Property Name="total" Type="real" Nullable="false" />
+  </EntityType>
+  <EntityType Name="messages">
+    <Key>
+      <PropertyRef Name="message_id" />
+    </Key>
+    <Property Name="message_id" Type="int" Nullable="false" />
+    <Property Name="sender_id" Type="int" Nullable="false" />
+    <Property Name="reciever_id" Type="int" Nullable="false" />
+    <Property Name="message_content" Type="text" />
+    <Property Name="subject" Type="text" />
+    <Property Name="seen" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="notifications">
+    <Key>
+      <PropertyRef Name="notification_id" />
+    </Key>
+    <Property Name="notification_id" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="content" Type="text" Nullable="false" />
+    <Property Name="priority" Type="text" Nullable="false" />
+    <Property Name="date_time" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="passwords">
+    <Key>
+      <PropertyRef Name="password_id" />
+    </Key>
+    <Property Name="password_id" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="password" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="students">
+    <Key>
+      <PropertyRef Name="student_id" />
+    </Key>
+    <Property Name="student_id" Type="int" Nullable="false" />
+    <Property Name="assessment_grade" Type="real" />
+    <Property Name="student_level" Type="text" Nullable="false" />
+    <Property Name="subscription_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="subscription">
+    <Key>
+      <PropertyRef Name="subscription_id" />
+    </Key>
+    <Property Name="subscription_id" Type="int" Nullable="false" />
+    <Property Name="subscription_type" Type="text" Nullable="false" />
+    <Property Name="subscription_price" Type="real" Nullable="false" />
+    <Property Name="e_coin_amount" Type="real" Nullable="false" />
+    <Property Name="date_time_next_payment" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="transactions">
+    <Key>
+      <PropertyRef Name="transactions_id" />
+    </Key>
+    <Property Name="transactions_id" Type="int" Nullable="false" />
+    <Property Name="date" Type="text" Nullable="false" />
+    <Property Name="student_id" Type="int" Nullable="false" />
+    <Property Name="tutor_id" Type="int" Nullable="false" />
+    <Property Name="course_id" Type="int" Nullable="false" />
+    <Property Name="tutoring_session_id" Type="int" Nullable="false" />
+    <Property Name="transaction_amount" Type="real" Nullable="false" />
+    <Property Name="e_tutor_provision_percent" Type="real" />
+    <Property Name="status" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tutoring_sessions">
+    <Key>
+      <PropertyRef Name="tutoring_session_id" />
+    </Key>
+    <Property Name="tutoring_session_id" Type="int" Nullable="false" />
+    <Property Name="date_time" Type="text" Nullable="false" />
+    <Property Name="status" Type="text" Nullable="false" />
+    <Property Name="confirmed_status" Type="bit" Nullable="false" />
+    <Property Name="course_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tutors">
+    <Key>
+      <PropertyRef Name="tutor_id" />
+    </Key>
+    <Property Name="tutor_id" Type="int" Nullable="false" />
+    <Property Name="rating" Type="real" />
+    <Property Name="qualifications" Type="text" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="first_name" Type="text" Nullable="false" />
+    <Property Name="last_name" Type="text" Nullable="false" />
+    <Property Name="e_mail" Type="text" Nullable="false" />
+    <Property Name="pay_pal_mail" Type="text" Nullable="false" />
+    <Property Name="e_coin_total" Type="real" />
+    <Property Name="type" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="eTutorModelStoreContainer">
+    <EntitySet Name="courses" EntityType="Self.courses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="etutor_organization" EntityType="Self.etutor_organization" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="messages" EntityType="Self.messages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="notifications" EntityType="Self.notifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="passwords" EntityType="Self.passwords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="students" EntityType="Self.students" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="subscription" EntityType="Self.subscription" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="transactions" EntityType="Self.transactions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tutoring_sessions" EntityType="Self.tutoring_sessions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tutors" EntityType="Self.tutors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
