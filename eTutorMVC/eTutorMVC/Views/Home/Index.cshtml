@@ -1,0 +1,14 @@
+﻿@model eTutorMVC.Models.User
+@{ 
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <p><button class="btn btn-info" id="addressSearch" onclick="location.href='@Url.Action("LogIn", "Account")'">LOG IN </button></p>
+    <p><button class="btn btn-info" id="addressSearch" onclick="location.href='@Url.Action("CourseList", "BrowseCourse")'">BROWSE COURSES</button></p>
+    <p><button class="btn btn-info" id="addressSearch" onclick="location.href='@Url.Action("Mapa", "Home")'">Vaša lokacija</button></p>
+</div>
+
+<div class="row">
+    Welcome to eTutor MVC Web Application
+</div>
